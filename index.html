@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Add Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Add jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSGFpoO9xulkOBvo2L2NRdFXEZz6louU6moD4672QnX7klXS1ZZ" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-xs1lxBFuh87HUDM-Hhe/7X8V/un2jB8kQFmG01nl/9E8Fclw1cuF+cAZgrzD06kc" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <script src="script.js" defer></script>
+  <title>Funky Threads | Northern Colorado</title>
+</head>
+<body>
+  <header>
+      <nav>
+    <a href="#" class="logo">Funky Threads</a>
+    <ul class="nav-links">
+      <li><a href="products.html">Products</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  </header>
+
+  <section id="hero">
+    <img src="https://images.unsplash.com/photo-1573764008516-9c382e80fad0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Fort Collins">
+    <div class="hero-text">
+      <h1>Welcome to Funky Threads!</h1>
+      <p>Funky tee shirts, socks, and hats for young active people in Northern Colorado</p>
+    </div>
+  </section>
+
+ <section id="products">
+  <h2>Our Products</h2>
+  <div id="productCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="product-grid d-flex justify-content-center">
+          <!-- Add first four products here as divs with class "product" -->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="product-grid d-flex justify-content-center">
+          <!-- Add next four products here as divs with class "product" -->
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>
+
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Funky Threads, we believe in expressing your unique style. We offer a range of funky tee shirts, socks, and hats to help you stand out and make a statement. Our products are designed for young, active people in Northern Colorado who love to live life to the fullest.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name">
+      <input type="email" name="email" placeholder="Your Email">
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Funky Threads. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
