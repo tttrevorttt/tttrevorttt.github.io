@@ -1,7 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Smooth scrolling
   const navLinks = document.querySelectorAll('.nav-links a');
+  navLinks.forEach(link => {
+     link.addEventListener('click', (event) => {
+       const targetId = event.target.getAttribute('href');
+       const isLocalLink = targetId.startsWith('#');
 
+       if (isLocalLink) {
+         event.preventDefault();
+         const target = document.querySelector(targetId);
+         target.scrollIntoView({ behavior: 'smooth' });
+       }
+     });
+  });
   navLinks.forEach(link => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
