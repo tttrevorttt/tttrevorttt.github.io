@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -5,20 +7,50 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Delicious Handrawn', cursive;
   line-height: 1.6;
+  
 }
 
 header {
-  background-color: #333;
+  background-color: white;
   padding: 1rem;
 }
 
+    
+
+   
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Added this line */
   align-items: center;
+  padding: 0 2rem;
+  background-color: white;
+  border: none; /* Add this line to remove the border */
 }
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end; /* Added this line */
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav-links li a {
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 400;
+  font-size: 30px;
+  color: #5e6697; /* Change the color here */
+  transition: color 0.3s;
+  font-family: 'Delicious Handrawn', cursive;
+}
+
+.nav-links li a:hover {
+  color: #3c4266; /* Change the hover color here, if desired */
+}
+
 
 .logo {
   color: white;
@@ -26,9 +58,6 @@ nav {
   font-size: 1.5rem;
 }
 
-.nav-links {
-  display: flex;
-}
 
 .nav-links li {
   list-style: none;
@@ -45,6 +74,7 @@ nav {
   width: 100%;
   height: 80vh;
   overflow: hidden;
+  font-family: 'Delicious Handrawn', cursive;
 }
 
 #hero img {
@@ -61,6 +91,7 @@ nav {
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
+  
 }
 
 .hero-text h1 {
@@ -73,17 +104,26 @@ nav {
 }
 
 section {
-  margin: 2rem 0;
+  margin-bottom: 2rem 0;
   padding: 2rem;
   text-align: center;
 }
 
 h2 {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-size: 4.5rem;
 }
 
+
+#products h2,
+#about h2,
+#contact h2 {
+	font-family: 'Delicious Handrawn', cursive;
+}
+
+
 .product-grid {
+	font-family: 'Delicious Handrawn', cursive;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -96,6 +136,45 @@ h2 {
   width: 200px;
   position: relative;
 }
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%235e6697' d='M0.5 4L7.5 0.5v7L0.5 4z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%235e6697' d='M7.5 4L0.5 0.5v7L7.5 4z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%233c4266' d='M0.5 4L7.5 0.5v7L0.5 4z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%233c4266' d='M7.5 4L0.5 0.5v7L7.5 4z'/%3e%3c/svg%3e");
+}
+
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  margin: 0 auto;
+}
+
+.slide-image {
+  width: 100%;
+  height: auto;
+}
+
+.slide-title {
+  margin-top: 1rem;
+}
+
+.slide-caption {
+  margin-top: 0.5rem;
+}
+
 
 form {
   display: flex;
@@ -123,6 +202,7 @@ button[type="submit"]:hover {
 }
 
 footer {
+	font-family: 'Delicious Handrawn', cursive;
   background-color: #333;
   color: white;
   text-align: center;
@@ -142,3 +222,51 @@ footer {
 section {
   animation: fadeIn 2s;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-right: auto;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    padding: 5px;
+  }
+
+  .product-grid {
+    flex-wrap: wrap;
+  }
+
+  .product {
+    flex: 0 0 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-grid {
+    flex-wrap: wrap;
+  }
+
+  .product {
+    flex: 0 0 48%;
+    margin: 10px 0;
+  }
+}
+

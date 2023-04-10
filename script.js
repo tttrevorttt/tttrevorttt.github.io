@@ -1,26 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Smooth scrolling
-  const navLinks = document.querySelectorAll('.nav-links a');
-  navLinks.forEach(link => {
-     link.addEventListener('click', (event) => {
-       const targetId = event.target.getAttribute('href');
-       const isLocalLink = targetId.startsWith('#');
-
-       if (isLocalLink) {
-         event.preventDefault();
-         const target = document.querySelector(targetId);
-         target.scrollIntoView({ behavior: 'smooth' });
-       }
-     });
-  });
-  navLinks.forEach(link => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const targetId = event.target.getAttribute('href');
-      const target = document.querySelector(targetId);
-      target.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
 
   // Contact form submission
   const contactForm = document.querySelector('#contact form');
@@ -31,14 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Animate products
-  const productGrid = document.querySelector('.product-grid');
+  const productGrids = document.querySelectorAll('.product-grid');
   const observer = new IntersectionObserver(animateProducts, {
     root: null,
     threshold: 0.25
   });
 
-  productGrid.querySelectorAll('.product').forEach(product => {
-    observer.observe(product);
+  productGrids.forEach(productGrid => {
+    productGrid.querySelectorAll('.product').forEach(product => {
+      observer.observe(product);
+    });
   });
 });
 
